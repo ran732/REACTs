@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Fooditems from "./components/Fooditems";
 import ErrorMessage from "./components/Errormessage";
+import Container from "./components/Container";
+import Foodinput from "./components/Foodinput";
 // import React from "react";
 import "./App.css";
 
@@ -29,11 +31,27 @@ function App() {
   ];
   //let fooditems = [];
 
+  
+
+  const handleOnChange = (event) => {
+    console.log(event.target.value);
+  };
+
   return (
     <>
-      <h1> Healthy Food</h1>
-      <ErrorMessage items={fooditems}></ErrorMessage>
-      <Fooditems items={fooditems}></Fooditems>
+      <Container>
+        <h1 className="food-heading"> Healthy Food</h1>
+        <Foodinput handleOnChange={handleOnChange} />
+        <ErrorMessage items={fooditems}></ErrorMessage>
+        <Fooditems items={fooditems}></Fooditems>
+      </Container>
+
+      {/* <Container>
+        <p>
+          This is the list of healthy food items. if you will follow this list,
+          you will stay healthy and well beings.
+        </p>
+      </Container> */}
     </>
   );
 }
