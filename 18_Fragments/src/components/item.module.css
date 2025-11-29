@@ -9,7 +9,8 @@
  color: rgb(25, 162, 25);
 }
 
-.buy-button {
+.button {
   float: right;
   cursor: pointer;
 }
+
