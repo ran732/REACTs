@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Server Time</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; margin-top: 50px; }
+        h1 { color: #2c3e50; }
+        h2 { color: #e74c3c; }
+    </style>
+</head>
+<body>
+
+<h1>Hello Friends!</h1>
+<hr>
+<h2 id="clock">Loading time...</h2>
+
+<script>
+    function updateTime() {
+        const now = new Date(); // get client-side time
+        document.getElementById("clock").innerHTML = 
+            "Current time: " + now.toLocaleTimeString();
+    }
+
+    // Update every second
+    setInterval(updateTime, 1000);
+    updateTime(); // initial call
+</script>
+
+</body>
+</html>

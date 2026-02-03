@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <Container>
+      <Container className="main-container">
         <h1 className="food-heading"> Healthy Food</h1>
 
         <FoodInput handleKeyDown={onKeyDown} > </FoodInput>
@@ -31,12 +31,17 @@ function App() {
         
       </Container>
 
-      {/* <Container>
+      <Container>
         <p>
           This is the list of healthy food items. if you will follow this list,
           you will stay healthy and well beings.
         </p>
-      </Container> */}
+      </Container>
+      
+      <Container>
+        Hii, This is the main fooditem box.
+        
+      </Container>
     </>
   );
 }
