@@ -1,5 +1,11 @@
-let sumData=(a,b)=>{ 
+ // import and export module
+
+export let sumData=(a,b)=>{ 
     return a+b;
 }
 
-export default sumData
+export let minusData=(a,b)=>{ 
+    return a-b;
+}
+
+// export default sumData
