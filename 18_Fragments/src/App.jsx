@@ -20,7 +20,7 @@ function App() {
   };
 
   return (
-    <>
+    <div >
       <Container className="main-container">
         <h1 className="food-heading"> Healthy Food</h1>
 
@@ -31,18 +31,26 @@ function App() {
         
       </Container>
 
-      <Container>
-        <p>
+      <Container >
+        
           This is the list of healthy food items. if you will follow this list,
           you will stay healthy and well beings.
-        </p>
+        
       </Container>
       
       <Container>
-        Hii, This is the main fooditem box.
+        props.children that means passing data on app.jsx's inside component tag to its original tag
         
       </Container>
-    </>
+      <Container>
+        <h3>Topics Cover:---</h3>
+        <h5>1.Class Vs Functions Components</h5>
+        <h5>2.bootstrap in React</h5>
+        <h5>3.Fragments,Map method,Passing Data via Props,css module</h5>
+        <h5>4.Passing Components as Children,Handling Events,Passing Functions via props</h5>
+         <h5>5.State managements, states vs props,useState,hook</h5>
+      </Container>
+    </div>
   );
 }
 

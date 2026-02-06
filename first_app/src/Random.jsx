@@ -1,3 +1,4 @@
+import BaseComponent from "bootstrap/js/dist/base-component";
 function Random() {
 
     let number = Math.random() * 10;

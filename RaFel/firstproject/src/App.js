@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { post } from "./Data/post";
 
+
 function App() {
   let headerInfo = {
     email: "ran@gmail.com",
@@ -91,6 +92,9 @@ function App() {
           </Col>
         </Row>
       </Container> */}
+
+      <Fontaw/>
+
       <Container>
         <Row>
           {post.map((v, i) => {
