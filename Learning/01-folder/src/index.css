@@ -1,0 +1,15 @@
+.navbar{
+    display: inline;
+    align-items: center;
+    
+
+}
+
+
+.card{
+background-color: rgb(19, 20, 20);
+color: rgb(209, 208, 205);
+border-radius: 10px;
+padding: 10px;
+margin-bottom: 10px;
+}
