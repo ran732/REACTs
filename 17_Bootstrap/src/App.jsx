@@ -8,6 +8,7 @@ function App() {
 
   return (
   <div>
+  <div style={{'padding':'100px'}}>
     <button type="button" className="btn btn-primary">
       Primary
     </button>
@@ -36,7 +37,7 @@ function App() {
     <button type="button" className="btn btn-link">
       Link
     </button>
-    
+  </div>  
 
     <div className="card" style={{ width: "18rem" }}>
       <img src="..." className="card-img-top" alt="..." />
@@ -48,6 +49,7 @@ function App() {
       </div>
     </div>
 
+  
   </div>
   );
 
