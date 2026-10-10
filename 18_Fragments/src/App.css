@@ -1,4 +1,5 @@
-
-html{
-  color: black;
+.header-text{
+  font-weight: bold;
+  color: #151414;
+  background-color: rgb(252, 253, 253);
 }

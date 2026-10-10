@@ -2,25 +2,43 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Fooditems from "./components/Fooditems";
 import ErrorMessage from "./components/ErrorMessage";
+import Container from "./components/Container";
+import Foodinput from "./components/Foodinput";
+import { useState } from "react";
 
 function App() {
-  let foodItems = ["Apple", "Banana", "Mango", "Grapes", "Ghee"];
+  // let foodItems = ["Apple", "Banana", "Mango", "Grapes", "Patato",];
 
-  // if (foodItems.length == 0) {
-  //   return <h3>I am still hungry.</h3>
-  // }
+  // let textStateArr = useState("Food input enter by user");
+  // let texttoshow =textStateArr[0];
+  // let settexttoshow = textStateArr[1];
+  // console.log(`Current value of textState : ${texttoshow}`)
 
-  // let emptymessage = foodItems.length === 0 ? <h3>I am still hungry.</h3> : null  // ternery operator
+  let [foodItems, setfoodItems] = useState([]);
+
+
+  const onKeyDown = (event) => {
+    if (event.key == 'Enter') {
+      let newFoodItem = event.target.value
+      event.target.value = " ";
+      let newItems = [...foodItems,newFoodItem]
+      setfoodItems(newItems)
+    }
+ 
+  };
 
   return (
     <>
-      <h1> Healthy Food</h1>
-
-      <Fooditems destructring_fooditem = {foodItems} />
-      <ErrorMessage item= {foodItems} />
-      
-
-   
+      <Container>
+        <center>
+          <h1 className="header-text"> Healthy Food</h1>
+        </center>
+        <Foodinput handlekeyDown={onKeyDown}/>
+        <Fooditems destructring_fooditem={foodItems} />
+        <ErrorMessage item={foodItems} />
+      </Container>
+      <Container>
+       <p> Yes The items in the that appropriate conditon </p> </Container>
     </>
   );
 }

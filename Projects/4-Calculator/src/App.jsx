@@ -1,35 +1,15 @@
-import { useState } from "react";
 import styles from "./App.module.css";
-import ButtonsContainer from "./components/ButtonsContainer.jsx";
-import Display from "./components/Display.jsx";
-
-function App() {
-  
-  const [CalVal, setCalVal]=useState("");
-  const onButtonClick = (buttonText) => {
-    if  (buttonText=== 'C'){
-      setCalVal("");
-
-    }else if (buttonText === '=') {
-      const result = eval(CalVal);
-      setCalVal(result);
-
-    }else{
-      const newDisplayValue = CalVal + buttonText;
-      setCalVal(newDisplayValue);
-    }
-  
-  };
-
-
-
-
+import Display from "./components/Display";
+import ButtonsContainer from "./components/ButtonsContainer";
+const App = () => {
   return (
-    <div className={styles.calculator} >
-      <Display displayValue={CalVal}/>
-      <ButtonsContainer onButtonClick={onButtonClick} />
+    <center>
+    <div id={styles.calculator}>
+      <Display></Display>
+      <ButtonsContainer />
     </div>
+    </center>
   );
-}
+};
 
 export default App;
